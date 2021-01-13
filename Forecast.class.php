@@ -43,7 +43,7 @@ class Forecast {
         $actual_size = (RAM_SIZE * $studies_per_day) / RAM_STUDIES;
         $actual_size = convert_mb_to_gb($actual_size);
     
-        $cost = ((RAM_USAGE_RATE * $actual_size) / RAM_USAGE_SIZE) * $number_of_days;
+        $cost = ((RAM_USAGE_RATE * $actual_size) / RAM_USAGE_SIZE) * 24 * $number_of_days;
     
         return number_format($cost, 2, '.',',');
     }
